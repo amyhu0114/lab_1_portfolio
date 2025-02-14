@@ -4,54 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <h1>Resume</h1>
     <nav>
         <a href="../index.html">Home</a>
         <a href="../projects/index.html">Projects</a>
-        <a href="index.html">Resume</a>
+        <a href="index.html" class="current">Resume</a>
         <a href="../contact/index.html">Contact</a>
         <a href="https://github.com/amyhu0114" target="_blank">GitHub</a>
     </nav>
-
-    <header>
-        <h1>Amy Hu</h1>
-        <p>Email: jyhu@mit.edu | Phone: 832-228-1234</p>
-    </header>
-    <section class="education">
-        <h2>Education</h2>
-        <article>
-            <p><strong>Massachusetts Institute of Technology</strong> - Expected: May 2026</p>
-            <p>Candidate for B.S. in Electrical Engineering and Computer Science</p>
-        </article>
-        <article>
-            <p><strong>Wellesley College</strong> - Expected: May 2026</p>
-            <p>Candidate for B.A. in Data Science</p>
-        </article>
-    </section>
-    
-    <section class="experience">
-        <h2>Experience</h2>
-        <article>
-            <p><strong>MIT AutoID Lab</strong> - Research Assistant (<time datetime="YYYY">2022</time>-Present)</p>
-            <ul>
-                <li>Design and prototype a low-cost wireless sensing device using a combination of microfluidic channels and RFID
-                    tags to efficiently detect water contamination in oil.</li>
-                <li>Conduct experiments to measure the lateral flow time and radio frequency properties of different liquids;
-                    Visualize the collected data using MATLAB to identify useful trends for sensor design.</li>
-                <li><a href="https://doi.org/10.1109/jsen.2024.3353184" target="_blank">DOI</a></li>
-            </ul>
-        </article>
-        <article>
-            <p><strong>Wellesley College Department of Mathematics</strong> - Research Assistant (<time datetime="YYYY">2022</time>-<time datetime="YYYY">2024</time>)</p>
-            <ul>
-                <li>Propose an innovative dimension reduction methodology in high-dimensional mediation analysis setting that
-                    yields a higher accuracy rate than existing techniques.</li>
-                <li>Implement and evaluate the performance of the proposed methodology by designing effective simulations in R.</li>
-                <li><a href="http://dx.doi.org/10.1002/sta4.675" target="_blank">DOI</a></li>
-            </ul>
-        </article>
+    <section id="resume">
+        <header>
+            <h1>Amy Hu</h1>
+            <h3>Email: jyhu@mit.edu | Phone: 832-228-1234</p>
+        </header>
+        <section class="education">
+            <h2>Education</h2>
+            <article>
+                <h4><strong>Massachusetts Institute of Technology</strong> - Expected: May 2026</h4>
+                <p>Candidate for B.S. in Electrical Engineering and Computer Science</p>
+            </article>
+            <article>
+                <h4><strong>Wellesley College</strong> - Expected: May 2026</h4>
+                <p>Candidate for B.A. in Data Science</p>
+            </article>
+        </section>
+        
+        <section class="experience">
+            <h2>Experience</h2>
+            <article>
+                <h4><strong>MIT AutoID Lab</strong> - Research Assistant (<time datetime="YYYY">2022</time>-Present)</h4>
+                <ul>
+                    <li>Design and prototype a low-cost wireless sensing device using a combination of microfluidic channels and RFID
+                        tags to efficiently detect water contamination in oil.</li>
+                    <li>Conduct experiments to measure the lateral flow time and radio frequency properties of different liquids;
+                        Visualize the collected data using MATLAB to identify useful trends for sensor design.</li>
+                    <li><a href="https://doi.org/10.1109/jsen.2024.3353184" target="_blank">DOI</a></li>
+                </ul>
+            </article>
+            <article>
+                <h4><strong>Wellesley College Department of Mathematics</strong> - Research Assistant (<time datetime="YYYY">2022</time>-<time datetime="YYYY">2024</time>)</h4>
+                <ul>
+                    <li>Propose an innovative dimension reduction methodology in high-dimensional mediation analysis setting that
+                        yields a higher accuracy rate than existing techniques.</li>
+                    <li>Implement and evaluate the performance of the proposed methodology by designing effective simulations in R.</li>
+                    <li><a href="http://dx.doi.org/10.1002/sta4.675" target="_blank">DOI</a></li>
+                </ul>
+            </article>
+        </section>
     </section>
 </body>
 </html>
