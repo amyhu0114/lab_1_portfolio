@@ -51,7 +51,6 @@ nav {
     justify-content: space-around; /* Evenly distribute items */
     align-items: center; /* Center items vertically */
     gap: 1rem; /* Space between items */
-    padding: 1rem;
     margin-bottom: 1rem; /* Separate nav from content */
     border-bottom: 1px solid var(--border-gray); /* Cool gray bottom border */
 }
@@ -63,14 +62,15 @@ nav a {
     color: inherit; /* Add here color */
     text-align: center; /* Add here text-align */
     padding: 0.5em; /* Add here padding */
-    margin-bottom: 1rem; /* Add here margin-bottom */
+    /* margin-bottom: 1rem; Add here margin-bottom */
+    border-bottom: 0.4em solid transparent;
 }
     /* NOTE: please make sure that in each index.html page you add class="current" to the current page*/
         /* For example:  <a href="index.html" class="current">Home</a> */ 
 
         nav a.current {
             border-bottom: 0.4em solid var(--lighter-gray);
-            padding-bottom: 0.1em 
+            padding-bottom: 0.5em 
     /* Add here what your current page should look like at the navigation bar (highlight)*/
 }
 
