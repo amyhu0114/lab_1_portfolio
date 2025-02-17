@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Jia Yuan (Amy) Hu</strong> - <em>jyhu@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Speculation</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>To what extent is speculation occuring? What type of people/entity are more likely to speculate?  (Source: Personal Experience - The landlord of my apartment is an real estate firm that specializes in property acquisition and invesment. Therefore, I'm curious about the extent to which speculation is occuring in the bigger Boston area.) </li>
+				<li>How does speculation change over time? (Source: Homes for Profit: Speculation and Investment in Greater Boston Report - The report covers data spanning from 2000-2023. Putting housing speculation into context of various historical events such as the burst of the housing bubble in 2008 that occured within the time frame of the study, I was curious to see if and how the extent of speculation changes over time.) </li>
+				<li>Where do housing speculation occur and what type of houses are most likely to be speculated? (Source: 6.C35J Lecture - In one of the first few lectures, the professor mentioned how speculation especially impacts communities with people of color so I was wondering if certain neighborhoods and housing types are more susceptible to speculation.) </li>
+				<li>How does the purchase of properties for investor vs. non-investor differ (e.g. cash/mortgage, sale price)? (Source: Homes for Profit: Speculation and Investment in Greater Boston Report - The report mentions that investors and non-investors have different goals in mind when purchasing a property. Therefore, I was curious about the differences between the transactions involving investor vs non-investor buyers.) </li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			<figure>
+				<img src="P1.png" alt="Proportion of Number of Residential Sales Transactions Across Different Buyer Categories" />
+				<figcaption>
+					Proportion of Number of Residential Sales Transactions Across Different Buyer Categories. From this initial visualization, we see that 73.40% of the transactions are made by non-investors while the remaining 26.60% of the transactions are made by different types of investors between 2000 and 2023. Among the investors, the percentage of transactions is inversely proportional to the size of the investor category, which is defined respectively by their total annual spending and the scale and pace of their acquisitions during the study period (See https://homesforprofit.mapc.org/report for detailed definition). The larger the investor buyer, the lesser number of residential sales transaction recorded.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P2.png" alt="Proportion of Total Price of Sales Transactions Across Different Buyer Categories" />
+				<figcaption>
+					Proportion of Total Price of Sales Transactions Across Different Buyer Categories. Switching from the number of transactions to the sum of prices spent by each buyer category, we see that only 32.06% of the total transaction price is made by non-investors. The remaining 67.94% are made by investors of different types, with institutional investors contributing a maximum of 36.50% and medium investors contributing 8.19% of the total sum of prices. Combined with the results from Figure 1, we learn that bigger investors makes fewer but more expensive purchases of properties.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P3.png" alt="Price of Transaction Across Different Buyer Categories Over Time" width="580" height="400"/>
+				<figcaption>
+					Price of Transaction Across Different Buyer Categories Over Time. Expanding on the time scale and disaggregating the price scale, I noticed some really big values such as the point at the bottom right with a peculiar price of $999999999 - which seemed artificial at first glance. Upon further research on Zillow, I learned that the point is The Landmark Center located at 401 Park Drive, which was sold for $1,503,974,593.32 in February 2021. As a result, it seems that the data point is not actually noise and that the dataset could have likely been capped at $1,000,000,000. Then, I investigated the lower end of the price spectrum and found multiple entries at different units of 1111 Boylston street, 15-15A Garden street, 329/341 Commonwealth Avenue, 216 Newbury Street, and 25 Pinckney Street with a sales price of $1. Through researching the feasibility of selling a home for $1, it seems that it is only possible in a few situations - usually involving selling the house within the family or between married couple or that the property is rundown. However, the sale history on Zillow didn't show any records of the properties being sold at $1, so I chose to exclude those data from the dataset. Moreover, there are some other properties that are sold at lower than normal prices (e.g. below $10,000) and that Zillow doesn't show any records of the properties being sold at that price. Therefore, I filtered the dataset to contain only entries with price >= $10,000.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P5.png" alt="Total Purchase Price Over Time Across Different Buyer Categories" width="580" height="400"/>
+				<figcaption>
+					Total Purchase Price Over Time Across Different Buyer Categories. Extending on the investigation of changes over time, there is a slight general upward trend that fluctuates with societal events for the sum of purchase price over time for all categories of buyer, with investors being more sensitive to changes in the economic environment (as reflected by steeper slopes). Note that there is a downward dip for all categories of buyers in 2008 - likely due to the Great Recession and the associated housing bubble burst. The sum of prices for transactions involving a small, medium, or large investor have been consistently lower than that of the non-investors. The sum of prices for transactions involving institutional investors had occasional spikes above that of non-investors - notably between 2005-2007, 2010-2011, and 2016-2021.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P4.png" alt="Price of Transaction Across Different Buyer Categories Map" width="580" height="400"/>
+				<figcaption>
+					Price of Transaction Across Different Buyer Categories Map. The longitudes and latitude of the property reveals difference in layout, prices, and majority buyer category for different neighborhoods. For example, there are clusters of higher-priced buildings purchased by institutional investors in the Downtown Boston/Financial District area. Moreover, housing transactions in the South End neighborhood seems to involve more non-investors than that of the Back Bay neighborhood. From visual inspection, housings in Back Bay seem to be more organized in longer rows while housings in South End are clustered in shorter rows. Adding in some social context based on background research, Back Bay tend to attract residents who seeks a more upscale housing while South End has been a destination for many immigrant groups.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P7.png" alt="Top Property Type Across Each Investor Category" width="580" height="400"/>
+				<figcaption>
+					Top Property Type Across Each Investor Category. This visualization focused on the housing sales where the buyer is some type of investor. The size of each circle correlates with the number of investors investing for the specific category of housing. For all four types of investors (small, medium, large, institutional), the top type of housing to buy is Residential Cluster Development (RCD). Other top housing types include Apartment (APT), Commercial (COM), Single Family Residence (R1F), and Real-Estate Owned (REO) properties.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P6.png" alt="Median Number of Total Properties Attached to a Buyer for Different Property Types and Buyer Categories" width="580" height="400"/>
+				<figcaption>
+					Median Number of Total Properties Attached to a Buyer for Different Property Types and Buyer Categories. Inspired by the top property types across each investor category, a follow-up question on how the property type correlate with the number of properties owned by the buyer arises. Across all categories of investors and non-investors, the type of properties that have the highest median number of total properties attached to the buyer's name includes Residential Cluster Development (RCD), Single Family Residence (R1F), Real-Estate Owned (REO), and Condo (CND) - which resonates with our results from Figure 6. Moreover, as expected, the median number of total properties attached to a buyer correlate positively with the size of the investor.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P10.png" alt="Price of Transaction on a Log Scale for Different Buyer Categories"/>
+				<figcaption>
+					Price of Transaction on a Log Scale for Different Buyer Categories. Another influential feature that could correlate with the likelihood of the property being speculated is the price. The boxplot is created based on filtered data that excluded abnormal data points mentioned in Figure 3 (i.e. transactions where the sale price is less than $10,000). Based on the 50th percentile of each buyer categories, the median price of house purchased correlates positively with the size of the investor - bigger the investor, higher median price of property purchased - with the exception of institutional investors, whose median price is between small investor and non-investors. However, institutional investors have the largest variance in the price of home purchased and contains some of the highest priced sales of homes. In general, investors seem to have a higher median price of property purchased than that of non-investors. Note that price is plotted on a log scale in order to spread the values more evenly.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P8.png" alt="Percentage of Zero-Mortgage Transactions for Each Investor Category" width="580" height="200"/>
+				<figcaption>
+					Percentage of Zero-Mortgage Transactions for Each Investor Category. Given the high price of properties, a follow-up question on how investor vs non-investor buyers are financing the purchase arises. The bars represents percentages calculated by dividing the number of purchases with no mortgages by the total number of purchases made by that buyer category. Non-investors have the lowest percentage of cash-only transactions - only 27.48% of the transactions are paid with no mortgage. On the other hand, for investors, the percentage of zero mortgage transactions are proportional to the size of the investor (except for small investors having a slightly higher percentage of cash-only purchase compared to medium investors). Institutional investor has the highest percentage of 54.76% of cash-only transactions - likely due to the availability of more fund.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="P9.png" alt="Percentage of Property Transactions Whose Flip Horizon is Less Than 2 Years for Each Investor Category" width="580" height="200" />
+				<figcaption>
+					Percentage of Property Transactions Whose Flip Horizon is Less Than 2 Years for Each Investor Category. Surprisingly, institutional investors have the lowest percentage of 2.443% of property purchase whose flip horizon is less than 2 year - potentially due to institutional investors often purchasing entire apartment buildings with the long-term goal of making profit through rent instead of short-term resales. For the remaining investors, the percentage of property purchase whose flip horizon is less than 2 year was positively correlated with the size of the investor. On the other hand, the percentage of properties with a short-term flip for non-investors is 3.206%, which falls between the value for institutional investors and small investors.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>From the exploratory data analysis of the residential sales data in the city of Boston from 2000-2023, I aimed to gain a better understanding of to what extent, where, and how does speculation occur and change in Boston over time. I learned that investor buyers participate in fewer housing transactions than non-investors, but they tend to invest in higher-priced properties than non-investors and have higher number of total properties attached to their names. Over time, there is a general upward trend of the sum of purchase price for all categories of buyers that fluctuates with societal events, with investors being more sensitive to changes in the economic environment. In terms of geographic locations, while housing transactions involving investor and non-investor buyers both occur in almost all neighborhoods, there are more speculation occurring in neighborhoods such as Back Bay and Downtown Boston than that of neighborhoods such as South End. Moreover, the proportion for cash-only purchase with no mortgage is higher for investor buyers than non-investor buyers - likely due to the availability of more cash on hand for speculators. </p>
+		</section>
+	</main>
+</body>
+</html>
