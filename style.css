@@ -18,6 +18,11 @@
     --lighter-gray: oklch(90% 3% 200); 
 }
 
+html {
+    /* accent-color: var(--color-accent); */
+    color-scheme: dark;
+  }
+  
 /* STEP 1: Prevent content from getting too wide */
 
 /* 
@@ -45,6 +50,7 @@ nav li {
 
 /* Step 2.2: Apply Flexbox to the navigation */
 nav {
+    --border-color: oklch(50% 10% 200 / 40%);
     display: flex; /* Turns nav into a flex container */
 
     /* You will need to continue writing here for step 2.3 */
@@ -52,7 +58,8 @@ nav {
     align-items: center; /* Center items vertically */
     gap: 1rem; /* Space between items */
     margin-bottom: 1rem; /* Separate nav from content */
-    border-bottom: 1px solid var(--border-gray); /* Cool gray bottom border */
+    border-bottom: 1px solid; /* Cool gray bottom border */
+    border-bottom-color: var(--border-color);
 }
 
 /* Step 2.3: Style navigation links for each element <a> */
@@ -64,6 +71,7 @@ nav a {
     padding: 0.5em; /* Add here padding */
     /* margin-bottom: 1rem; Add here margin-bottom */
     border-bottom: 0.4em solid transparent;
+    border-bottom-color: var(--border-color);
 }
     /* NOTE: please make sure that in each index.html page you add class="current" to the current page*/
         /* For example:  <a href="index.html" class="current">Home</a> */ 
@@ -88,6 +96,7 @@ nav a:hover {
 
 /* Step 3.1: Integrate typography */
     /* (you do not need to make any changes here for step 2.1, but please take note of it!) */
+select,
 input,
 textarea,
 button {
@@ -179,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 50rem;
         margin: 2rem auto;
         padding: 2rem;
-        background: var(--lighter-gray);
+        background: color-mix(in oklch, var(--lighter-gray), canvas 85%);
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         /* ... */ 
@@ -206,7 +215,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
     #resume article {
-        background: white;
+        /* background: white; */
+        background-color: color-mix(in oklch, var(--lighter-gray), canvas 85%);
         padding: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -217,4 +227,13 @@ h1, h2, h3, h4, h5, h6 {
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--border-gray);
     }
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 80%;
+  display: inline-flex;
+  gap: 4px;
+}
     
