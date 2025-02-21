@@ -231,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 .color-scheme {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  right: 1rem;
   font-size: 80%;
   display: inline-flex;
   gap: 4px;
