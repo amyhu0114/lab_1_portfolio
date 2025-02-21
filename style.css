@@ -71,7 +71,7 @@ nav a {
     padding: 0.5em; /* Add here padding */
     /* margin-bottom: 1rem; Add here margin-bottom */
     border-bottom: 0.4em solid transparent;
-    border-bottom-color: var(--border-color);
+    /* border-bottom-color: var(--border-color); */
 }
     /* NOTE: please make sure that in each index.html page you add class="current" to the current page*/
         /* For example:  <a href="index.html" class="current">Home</a> */ 
