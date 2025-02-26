@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Critique & Redesign
+		</h1>
+
+		<p>
+			<strong>Jia Yuan (Amy) Hu</strong> - <em>jyhu@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Reading & Critique</h2>
+
+			<figure>
+				<img src="https://vis-society.github.io/assets/imgs/covid-spiral.png" alt="New Covid-19 Cases Spiral" width="400" height="400"/>
+			</figure>
+
+			<p>
+				Insights about the data/visualization:
+			</p>
+
+			<ul>
+				<li>The visualization depicts the 7-day average number of new Covid-19 cases in the United States from January 2020 to January 2022.</li>
+				<li>Peak: Devember 2020-January 2021 & August 2021-October 2021 & January 2022.</li>
+				<li>Trough: January 2020-February 2020 & June 2021-July 2021.</li>
+				<li>Trend: The number of new Covid-19 cases seem to be large during Winter of 2021 & 2022.</li>
+			</ul>
+
+			<p>
+				Design Critique:
+			</p>
+
+			<ul>
+				<li>Expressive and effective visual encodings such as position on common scale and length/area are used. </li>
+				<li>Working well: The radial axis for time puts the same month of different years (2020-2022) on the same axis. This enables us to account for seasonal trends and compare the height of peak and trough for each month across each year. It was easy to identify times where there's an upsurge in number of new Covid-19 cases - hence, the target audience is likely to understand the visualization. Overall, it reveals the most important trends of the data somewhat well.</li>
+				<li>Could be improved: The current design choice of using area to depict the number of new Covid-19 case makes it a bit difficult to eyeball the exact number of new Covid-19 cases over time and do exact comparison between the height of the curve at different times. This issue could potentially be fixed by putting circular grid lines indicating the 150K scale. Moreover, it would be helpful to add some labels highlighting the exact number of new Covid-19 cases during notable peaks and troughs - if space allows, it would also be helpful to add some background text that explains major events correlated with the peak/trough (e.g. introduction of new vaccine, development of new variant). Furthermore, I think the author could more clearly highlight that the visualization is for the number of NEW Covid-19 cases - not the total number of people infected by Covid at the time. Lastly, It may also be helpful to color-code different year to make it easier for the readers to pinpoint which year they are looking at.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Visualization Sketches</h2>
+
+      <figure>
+				<img src="sketch1.png" alt="Spiral Line Chart for New Covid-19 Cases in the United States" />
+				<figcaption>
+          			Spiral Line Chart for New Covid-19 Cases in the United States from 2020-2022
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>I liked the circular structure of the original visualization but wanted to choose a visual encoding that's higher up on the expressiveness ranking. Therefore, I retained the general spiral axis of the original visualization but color-coded and overlapped the curves for the two years on the same axis.</li>
+				<li>Work well: The added scale mark and axis label for each month helps better quantify the number of new cases each month; Having the two curves on the same axis allows for more straight-forward comparison. Also, the added text labels provide some background context on the shown trends in data.</li>
+				<li>Didn't work well: The scale on the axis is a bit big, making a little challenging to know the exact number of new cases at each month</li>
+				<li>iv.	Next Visualization: In the next sketch, I want to better explore the trend over time by straightening out the axis.</li>
+			</ul>
+
+			<figure>
+				<img src="sketch2.png" alt="Line Chart for New Covid-19 Cases in the United States" />
+				<figcaption>
+					Line Chart for New Covid-19 Cases in the United States from 2020-2022
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li>Motivation: I wanted to straighten out the data to better highlight the change in number of new cases in a sequential order.</li>
+				<li>Worked well: Highlight continuous trend over time in chronological order. Also, the added text labels provide some background context on the shown trends in data. Moreover, color-coding the year helped better highlight the difference in year between data.</li>
+				<li>Didn't work well: The horizontal axis was a bit too long. Also, by not having the line plots overlaid on top of each other, comparison between the same month of different years are less straight-forward.</li>
+			</ul>
+
+			<figure>
+				<img src="sketch3.png" alt="Calendar View for Number of New Covid-19 Cases in the United States" />
+				<figcaption>
+					Calendar View for Number of New Covid-19 Cases in the United States in 2020-2022
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>I wanted to use a visual encoding that's higher up on the expressiveness ranking to express the upsurge of number of new Covid-19 cases for each month.</li>
+				<li>Worked Well: Using colors from a rainbow scale that's well-understood by people makes it easy to see the change in number of new Covid-19 Cases over time.</li>
+				<li>Didn't work well: This visualization condensed the data into single datapoint per month - it doesn't show the transition between months. Moreover, the visualization compressed quantitative data into bins of values, making it harder to see the exact number of new cases for each month. </li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Final Visualization Design</h2>
+      
+			<figure>
+				<img src="Final_Viz.png" alt="Spiral Line Plot for New Covid-19 Cases in the United States" width="600" height="500"/>
+				<figcaption>
+          Spiral Line Plot for New Covid-19 Cases in the United States from 2020-2022 with Major Events Labeled
+				</figcaption>
+			</figure>
+
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+				In this visualization, I wanted to better quantify the exact number of new Covid-19 cases over time while retaining the alignment of the same month from different years. The visual channels used include position on common scale, length, and color hue. I chose to use a line plot as opposed to the area plot from the original visualization because line plot is more effective in conveying quantitative information than that of area. Moreover, I chose to overlay the plots for each year on top of each other and keep the alignment of the month to allow for more straight-forward comparison that accounts for seasonal trends across different years. Each year is color-coded in a sequential order (rainbow: red -> yellow -> blue) to help the reader more easily trace the new case number to the correct month and year. I chose the scale to be 200,000 apart to accommodate both the smaller number of new cases in 2020 and 2021 and larger number of new cases in 2022. In terms of data processing, I chose to retain the same structure of calculating 7-day average as the original visualization to lessen the influence of potential outliers and avoid overplotting. I also decided to add text label for major events such as first vaccine rollout to provide more context to the trends in data. In addition, I added a note to emphasize that the numbers are new cases instead of cumulative cases. Lastly, I decided to add in some decoration/'chart junk' to make the visualization more memorable.
+      </p>
+
+      <h3>Reflection</h3>
+
+      <p>
+        My final design does address all my critiques raised in step 2. The critique by redesign process does help me identify some of the challenges of communicating the data. For example, I raised the critique that the original visualization put the three years (2020, 2021, 2022) in different locations which made it less straight-forward to see the difference in new Covid-19 cases between the same month of different years. When redesigning the visualization, I was torn between having one singular plot with the data from all three years overlaid on top of each other vs having multiple subplots each representing one year. The design tradeoff was on better comparison vs. non-obstructed view of the trends for each year. As I went through the redesign process, I was able to better understand why the author made some of their design choices.
+      </p>
+		</section>
+	</main>
+</body>
+</html>
