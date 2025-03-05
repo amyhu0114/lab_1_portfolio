@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Jia Yuan (Amy) Hu</strong> - <em>jyhu@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+    <h2>Proposition: Democrat-leaning states have more abortions than Republican-leaning states.</h2>
+
+		<section>
+      <h3>FOR the Proposition</h3>
+
+      <figure>
+				<img src="support.png" alt="Supporting Visualization" />
+				<figcaption>
+					Democrat-leaning states mostly have a higher ratio of the number of abortions per 1000 women in 2020 by state of residence than that of Republican-leaning states. States with a red undertone are Republican-leaning while states with a blue undertone are Democrat-leaning. Alaska and Hawaii are included but not drawn to scale.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>Deceptive/Earnest Score: 1.5. I chose to visualize the proportion of abortions (per 1000 women) because this value is normalized by the state's total population, which lightens the impact of the baseline population of the state on the abortion numbers.</li>
+				<li>I chose a diverging scale on the red-blue spectrum, with the color intensity representing the number of abortions per 1000 women for each U.S. state based on state of residence in 2020, to better highlight the relationship between the political leanings of the states and the proportion of abortion for women residing in the state. To incorpoate the political leaning information, I augmented the dataset with a new column called political leaning which categorized a state into either Republican-leaning or Democrat-leaning based on results from recent presidential electrions.</li>
+				<li>To ensure that the republican-leaning states are on the red spectrum and the democrat-leaning states are on the blue spectrum, I utilized a conditional statement based on the political leaning of the state and multiplied the percentages for republican states by -1 such that after setting the center of the color spectrum to be 1, the underlying color of the state aligns with their political leaning.</li>
+			</ul>
+    </section>
+
+    <section>
+      <h3>AGAINST the Proposition</h3>
+
+      <figure>
+				<img src="oppose.png" alt="" />
+				<figcaption>
+					Multiple Republican-leaning states such as Texas and Florida have more abortions than that of Democrat-leaning states. States with a red undertone are Republican-leaning while states with a blue undertone are Democrat-leaning. Alaska and Hawaii are included but not drawn to scale.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>Deceptive/Earnest Score: -1. I chose to visualize the actual number of abortions to support the opposing proposition that Republican-leaning states don't necessarily have less abortions than that of Democrat-leaning states. However, note that this value is not normalized by the state's total population, which means that states with higher baseline population would naturally have more abortion cases, with a lessened impact by its political leaning.</li>
+				<li>I decided to follow a similar structure of visualizing the map with states color-coded based on their political leaning (red for republican-leaning and blue for democrat-leaning) and the intensity of color representing the number of abortion cases as that of the visualization that supported the proposition to better highlight that we can use the same dataset and even the same visualization type to paint two different stories.</li>
+				<li>Alaska and Hawaii are added on the side of the map because they represent significant number of abortions and are part of the 50 U.S. states.  Other U.S. territories such as Puerto Rico were not included because they are not U.S. states and the dataset didn't contain any data on them.</li>
+			</ul>
+    </section>
+
+    <section>
+      <h2>Final Reflection</h2>
+
+      <p>For the opposing visualization, I chose to use number of abortion whereas for the supporting visualization, I chose to use ratio of abortion (out of 1000 women). The opposing case was borderline misleading because the numbers didn't account for the baseline population of the state - States with bigger population would naturally have a greater number of abortions regardless of its political leanings. The supporting case, on the other hand, was based on a proportion, which is normalized to the state's population and allows for direct comparison between different states with different baseline population. It surprised me that we can manipulate the data and use the same data to paint two different stories/viewpoints. It also evoked thoughts on potential confirmation bias held by the analyst when going into a dataset. Inspired by this assignment, I define ethical analysis and visualization as not letting your design choices be influenced by the proposition that you're trying to make. If possible, the data cleaning process should be done before formulating a proposition and the visualizations should be as proposition blind as possible. Moreover, the proposition should be subject to change as different visualizations are being produced. Also, I found it more difficult to draw a distinct line between acceptable persuasive choices vs. misleading choices because take the opposing case, for example, one could argue that on one hand, the results shown are based on actual data and persuading based on actual trends from data; on the other hand, one could argue that the (lack of) data processing made it show results that included values that are not comparable due to lack of normalization.</p>
+    </section>
+	</main>
+</body>
+</html>
